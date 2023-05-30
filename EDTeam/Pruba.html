@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba</title>
+    <style>
+      .container {
+        width: 100px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button {
+        margin-top: 250px;
+        width: 120px;
+        height: 60px;
+        font-size: 20px;
+        background:  linear-gradient(180deg, #3ed8b2, #1db07b);
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .button:hover {
+        background:  linear-gradient(180deg, #47a890, #1baa76);
+      }
+      .aparecer {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button" >Boton</button>
+    </div>
+    <div></div>
+  </body>
+</html>
+<script>
+    const button = document.querySelector('.button')
+    button.addEventListener('click', () => {
+        const date = new Date()
+        alert("Segundo mensaje "+date)
+    })
+    for (let index = 0; index < 10000000000; index++) {
+            
+        }
+    /*setInterval(() => {
+        button.classList.add('aparecer')
+        button.innerHTML = "Boton"
+    }, 5000);*/
+  </script>

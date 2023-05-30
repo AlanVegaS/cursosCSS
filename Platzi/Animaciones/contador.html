@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        counter-reset: game;
+    }
+    input:checked {
+        counter-increment: game;
+    }
+    .total-counter::after {
+        content: counter(game);
+    }
+</style>
+<body>
+    <ul>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+        <li><input type="checkbox" class="shield"></li>
+    </ul>
+    <h3 class="total-counter">Score:</h3>
+</body>
+</html>

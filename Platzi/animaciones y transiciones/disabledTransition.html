@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        position: relative;
+        transition-duration: 1000ms;
+      }
+      .card:hover {
+        transform: rotateY(180deg);
+        transition-duration: 1000ms;
+      }
+      .face {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      .front {
+        background-color: darkslategrey;
+        transform: rotateX(180deg);
+      }
+      .back {
+        background-color: aqua;
+      }
+
+      @media (prefers-reduced-motion: reduce) {/*para cambiar valores cuando se activo la reduccion de animaciones*/
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="face front"></div>
+      <div class="face back"></div>
+    </div>
+  </body>
+</html>

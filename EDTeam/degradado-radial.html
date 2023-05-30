@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: bisque;
+    }
+    .yingyang {
+        --size: 400px;
+        --size2: calc(var(--size)/2);
+        --size3: calc(var(--size)/8);
+
+        width: var(--size);
+        height: var(--size);
+        margin: 50px;
+        border-radius: 50%;
+        background-image: 
+        radial-gradient(circle var(--size3) at 50% 25%, black 50%, transparent 50%),
+        radial-gradient(circle var(--size3) at 50% 75%, white 50%, transparent 50%),
+        radial-gradient(circle var(--size2) at 50% 25%, white 50%, transparent 50%),
+        radial-gradient(circle var(--size2) at 50% 75%, black 50%, transparent 50%),
+        linear-gradient(to right, white 50%, black 50%)
+    }
+</style>
+<body>
+    <div class="yingyang"></div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Flags</title>
+    <style>
+      .flag {
+        width: 250px;
+        height: 150px;
+        position: relative;
+        margin: 20px;
+        border: 0.5px solid;
+      }
+      .mexico {
+        background-image: linear-gradient(
+          to right,
+          hsl(161, 100%, 20%) 33.33%,
+          white 33.33%,
+          white 66.66%,
+          hsl(353, 85%, 44%) 33.33%
+        );
+        &:before {
+          content: "";
+          width: 60px;
+          height: 60px;
+          background: hsl(34, 87%, 61%);
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+        }
+      }
+      .colombia {
+        background-image: linear-gradient(
+          hsl(48, 100%, 50%) 50%,
+          hsl(221, 100%, 27%) 25%,
+          hsl(221, 100%, 27%) 75%,
+          hsl(349, 93%, 41%) 25%
+        );
+      }
+      .costarica {
+        background-image: linear-gradient(
+          hsl(235, 100%, 27%) 16.6%,
+          white 16.6%,
+          white 33.33%,
+          hsl(5, 83%, 47%) 33.33%,
+          hsl(5, 83%, 47%) 66.6%,
+          white 66.6%,
+          white 83.2%,
+          hsl(235, 100%, 27%) 83.2%
+        );
+      }
+      .argentina {
+        background-image: linear-gradient(
+          hsl(206 60% 64%) 33.33%,
+          white 33.33%,
+          white 66.66%,
+          hsl(206 60% 64%) 66.66%
+        );
+        &:before {
+          content: "";
+          width: 45px;
+          height: 45px;
+          background: hsl(39 100% 63%);
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+        }
+      }
+      .chile {
+        background-image: linear-gradient(white 50%, hsl(1deg 74% 43%) 50%);
+        &:after {
+          content: "★";
+          background-color: hsl(228 76% 36%);
+          color: white;
+          width: 35%;
+          height: 50%;
+          position: absolute;
+          text-align: center;
+          font-size: 50px;
+        }
+      }
+      .uruguay {
+        background-image: linear-gradient(
+          white 11.11%,
+          hsl(221 100% 33%) 11.11%,
+          hsl(221 100% 33%) 22.22%,
+          white 22.22%,
+          white 33.33%,
+          hsl(221 100% 33%) 33.33%,
+          hsl(221 100% 33%) 44.44%,
+          white 44.44%,
+          white 55.55%,
+          hsl(221 100% 33%) 55.55%,
+          hsl(221 100% 33%) 66.66%,
+          white 66.66%,
+          white 77.77%,
+          hsl(221 100% 33%) 77.77%,
+          hsl(221 100% 33%) 88.88%,
+          white 88.88%,
+          white
+        );
+        &:before{
+            content: '';
+            width: 35%;
+            height: 50%;
+            position: absolute;
+            background-color: white;
+        }
+        &:after {
+          content: "";
+          background-color: hsl(39 100% 63%);
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          border-radius: 50%;
+          top: 15px;
+          left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag mexico"></div>
+    <div class="flag colombia"></div>
+    <div class="flag costarica"></div>
+    <div class="flag argentina"></div>
+    <div class="flag chile"></div>
+    <div class="flag uruguay"></div>
+  </body>
+</html>

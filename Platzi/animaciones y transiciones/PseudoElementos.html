@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: brown;
+        }
+        a:visited{
+            color: goldenrod;
+        }
+        a:hover{
+            background-color: brown;
+        }
+        p:not(.conClase){
+            color:aqua ;
+        }
+        .prueba div:nth-child(1){
+            color: darksalmon;
+        }
+        .prueba div::before{
+            content: ':) ';
+        }
+        .prueba div::after{
+            content: '...';
+        }
+    </style>
+</head>
+<body>
+    <a href="">Link...</a>
+    <p>Hola</p>
+    <p class="conClase">Adios</p>
+    <div class="prueba">
+        <div>Prueba</div>
+        <div>Prueba</div>
+        <div>Prueba</div>
+    </div>
+</body>
+</html> 

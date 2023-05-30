@@ -1,0 +1,128 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 20px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.logo{
+    width: 150px;
+    justify-self: center;
+    margin-bottom: 48px;
+    display: none;
+}
+.myaccount{
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+.tittle {
+    text-align: center;
+    font-size: var(--lg);
+    font-weight: bolder;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+.subtitle {
+    text-align: center;
+    font-size: var(--md);
+    color: var(--very-light-pink);
+    margin-bottom: 32px;
+    margin-top: 0;
+    font-weight: 300;
+}
+.form {
+    display: flex;
+    flex-flow: column;
+
+}
+.label {
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.input {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--text-input-field);
+    height: 30px;
+    margin-bottom: 12px;
+    font-size: var(--md);
+    padding: 6px;
+}
+.button {
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: var(--md);
+    height: 40px;
+    cursor: pointer;
+}
+.primary-button {
+    border: none;
+    background-color: var(--hospital-green);
+    color: var(--white);
+    margin-top: 24px;
+}
+.secondary-button {
+    width: 100%;
+    border: 2px solid;
+    background-color: var(--white);
+    color: var(--hospital-green);
+    margin-top: 24px;
+}
+@media (max-width: 640px) {
+    .logo {
+        display: block;
+    }
+    .secondary-button {
+        position: absolute;
+        bottom: 40px;
+        width: inherit;
+    }
+    #myaccount{
+        display: block;
+    }
+}
+
+.mail-container{
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: var(--text-input-field);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+.resend {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    text-align: center;
+    padding-top: 12px;
+}
+.resend a{
+    color: var(--hospital-green);
+    text-decoration: none;
+}
+

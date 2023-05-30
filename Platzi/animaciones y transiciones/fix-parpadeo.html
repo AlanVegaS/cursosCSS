@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 50px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .container {
+        background-color: aquamarine;
+      }
+      .item {
+        background-color: darkolivegreen;
+      }
+      .container:hover .item{
+        transform: translateX(100px);
+      }
+
+      .containerWithoutFix {
+        background-color: aquamarine;
+      }
+      .itemWithoutFix {
+        background-color: darkolivegreen;
+      }
+      .itemWithoutFix:hover{
+        transform: translateX(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fix problem</h1>
+    <div class="container">
+      <div class="item"></div>
+    </div>
+    <h1>Whith problem</h1>
+    <div class="containerWithoutFix">
+        <div class="itemWithoutFix"></div>
+      </div>
+  </body>
+</html>

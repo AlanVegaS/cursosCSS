@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        font-size: xx-large;
+      }
+      ul :first-child {
+        background-color: dodgerblue;
+      }
+      ul :last-child {
+        background-color: dodgerblue;
+      }
+      .container {
+        width: 800px;
+        height: 1200px;
+        background-color: rgb(253, 248, 240);
+        margin: 100px auto;
+      }
+      .container1 {
+        width: 60%;
+        padding: 30px 0 0 30px;
+        display: inline-block;
+      }
+      .lista p:first-of-type{
+        background-color: crimson;
+      }
+      .lista p:last-of-type{
+        background-color: crimson;
+      }
+      .lista h1:first-of-type{
+        background-color: gold;
+      }
+      .lista h1:last-of-type{
+        background-color: gold;
+      }
+      .lista h2:first-of-type{
+        background-color: darkolivegreen;
+      }
+      .lista h2:last-of-type{
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <h2>Seleccionando primer y ultimo hijo</h2>
+        <ul>
+          <li>Li 1</li>
+          <li>Li 2</li>
+          <li>Li 3</li>
+          <li>Li 4</li>
+          <li>Li 5</li>
+        </ul>
+      </div>
+      <div class="container1">
+        <h2>Seleccionando con first-of-type y last-of-type</h2>
+        <div class="lista">
+          <p>Primer P</p>
+          <h1>Primer H1</h1>
+          <h2>Primer H2</h2>
+          <h1>Segundo H1</h1>
+          <p>Segundo P</p>
+          <h2>Segundo H2</h2>
+          <h2>Tercero H2</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

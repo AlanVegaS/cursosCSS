@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 10px;
+            width: 120px;
+            height: 50px;
+            border: 0px;
+            border-radius: 5px;
+            background-image: linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+            transition: transform 1s;
+            transform-origin: left;
+        }
+        button:hover {
+            transform: scaleX(1.2);
+            transform-origin: left;
+            transition: transform .3s cubic-bezier(1,-1.6,.75,1.9);
+        }
+    </style>
+</head>
+<body>
+    <button>hola</button>
+</body>
+</html>
