@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <style>
+        :root{
+            --timetransition: .25s;
+        }
+        body {
+            margin: 0;
+            font-family: monospace;
+        }
+        .container {
+            display: flex;
+            height: 400px;
+        }
+        .item {
+            height: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: flex-grow var(--timetransition);
+        }
+        .item:nth-child(1){
+            background-color: hsl(145, 63%, 49%);
+        }
+        .item:nth-child(2){
+            background-color: hsl(204, 70%, 53%);
+        }
+        .item:nth-child(3){
+            background-color: hsl(48, 89%, 50%);
+        }
+        .item:nth-child(4){
+            background-color: hsl(282, 44%, 47%);
+        }
+        p {
+            color: aliceblue;
+            font-size: 2rem;
+            font-weight: 700;
+            transform: rotate(270deg);
+            transition: transform var(--timetransition);
+        }
+        .item:hover{
+            flex-grow: 3;
+        }
+        .item:hover p{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"><p>Archivos</p></div>
+        <div class="item"><p>Fotos</p></div>
+        <div class="item"><p>Videos</p></div>
+        <div class="item"><p>Recientes</p></div>
+    </div>
+</body>
+</html>
