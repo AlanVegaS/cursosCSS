@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            font-size: 2rem;
+            min-height: 100vh;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 4em 6em 1fr 4em;
+            grid-gap: 1em;
+            color: white;
+        }
+        header {
+            background-color: #0c7537;
+            grid-row-start: 1;
+            grid-column: 1 / 12 span; /* 2 span se refiere a que ocupara 2 tracks */
+        }
+        .item {
+            background-color: #fc9f13;
+            grid-row: 2;
+            grid-column: span 4;
+        }
+        aside {
+            background-color: #beffda;
+            grid-row: 3;
+            grid-column: 1 / span 3;
+        }
+        main {
+            background-color: #7724d2;
+            grid-row: 3;
+            grid-column: span 9;
+        }
+        footer {
+            background-color: #ff6b72;
+            grid: 4;
+            grid-column: 1 / 13;/* 3 se refiere que ocupara 2 grid-lines*/
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <aside class="content">aside</aside>
+    <footer class="content">footer</footer>
+    <main class="content">main</main>
+    <header class="content">header</header>
+    <div class="item content">item</div>
+    <div class="item content">item</div>
+    <div class="item content">item</div>
+</body>
+</html>
