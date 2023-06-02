@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    .item {
+      background-color: #7724d2;
+      font-size: 2em;
+      color: aliceblue;
+    }
+    .container {
+      background-color: chocolate;
+      display: grid;
+      grid-template-columns: fit-content(400px) max-content;
+      gap: 1em;
+    }
+    input {
+      margin: 50px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item"><p id="textp">1</p></div>
+      <div class="item"><p class="textp">2</p></div>
+      <div class="item"><p class="textp">3</p></div>
+      <div class="item"><p class="textp">4</p></div>
+      <div class="item"><p class="textp">5</p></div>
+      <div class="item"><p class="textp">6</p></div>
+      <div class="item"><p class="textp">7</p></div>
+      <div class="item"><p class="textp">8</p></div>
+      <div class="item"><p class="textp">9</p></div>
+      <div class="item"><p class="textp">10</p></div>
+    </div>
+    <input type="text" name="texto" />
+  </body>
+  <script>
+    const input = document.querySelector("input");
+    const log = document.getElementById("textp");
+
+    input.addEventListener("input", updateValue);
+
+    function updateValue(e) {
+      log.textContent = e.srcElement.value;
+    }
+  </script>
+</html>
