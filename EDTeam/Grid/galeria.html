@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    .galery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+        gap: .5em;
+        grid-auto-flow: row dense;
+        grid-auto-rows: 200px;
+    }
+    .galery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .galery img:nth-child(3n) {
+        grid-area: span 2/ span 3;
+    }
+</style>
+<body>
+    <div class="galery">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+        <img src="shark.png" alt="">
+    </div>
+</body>
+</html>
