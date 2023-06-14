@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --scrollBarWidth: 0;
+        }
+        body {
+            margin: 0;
+            min-height: 560px;
+            padding-bottom: 200em;
+        }
+        p{
+            margin: 0;
+            font-size: 2rem;
+        }
+        .container {
+            background-color: aquamarine;
+            width: calc(100vw - var(--scrollBarWidth));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>hola</p>
+    </div>
+</body>
+<script>
+    const getScrollBarWidth = () => innerWidth - document.documentElement.clientWidth
+    document.documentElement.style.setProperty('--scrollBarWidth', getScrollBarWidth())
+    console.log(`${innerWidth} - ${document.documentElement.clientWidth}`);
+</script>
+</html>
