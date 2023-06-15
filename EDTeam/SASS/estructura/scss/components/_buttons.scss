@@ -1,0 +1,23 @@
+%button {
+    border: none;
+    font-size: 1.5rem;
+    padding: .5em;
+    margin: 2px;
+    border-radius: 10px
+}
+
+.button {
+    @extend %button;
+    color: white;
+    
+}
+
+.success {
+    background-color: map-get($colors, success);
+}
+.warning {
+    background-color: map-get($colors, warning);
+}
+.fail {
+    background-color: map-get($colors, fail);
+}

@@ -1,0 +1,8 @@
+@import 'config';
+@import 'components/buttons';
+
+@each $key, $value in $breakpoints {
+    .button-#{$key} {
+        width: $value;
+    }
+}
