@@ -1,0 +1,13 @@
+@mixin button {
+    .in-input {
+        border: 0;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    .in-input:focus {
+        outline: solid 1px gold;
+    }
+    .in-input:focus.in-input::placeholder {
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,10 @@
+@mixin shadow($numbers-shadows, $color) {
+    $shadows: 1px 1px 1px $color;
+    @for $i from 2 through $numbers-shadows {
+        $shadows: append($shadows, unquote(',') + #{$i*1px $i*1px 1px random-color()});
+    }
+    text-shadow: $shadows;
+}@function random-color() {
+    $shadow-color: rgb(random(255),random(255),random(255));
+    @return $shadow-color;
+   }

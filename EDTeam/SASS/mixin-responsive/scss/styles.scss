@@ -1,0 +1,20 @@
+@import 'mixins/responseve';
+@import 'config/config';
+
+body {
+    min-height: 100vh;
+    background-color: aquamarine;
+    margin: 0;
+    @include breakpoits(small){
+        background-color: cadetblue
+    };
+    @include breakpoits(medium){
+        background-color: red
+    };
+    @include breakpoits(large){
+        background-color: darkgoldenrod;
+    }
+    @include breakpoits(1400px){
+        background-color: darkseagreen;
+    }
+} 

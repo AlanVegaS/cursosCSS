@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "../scss/styles.scss",
+    "../scss/mixins/_shadow-custom.scss"
+  ],
+  "names": [],
+  "mappings": "AAEA;EACI;EACA;;;AAEJ;EACI;EACA;EACA;ECJA,aAFc",
+  "file": "styles.css"
+}

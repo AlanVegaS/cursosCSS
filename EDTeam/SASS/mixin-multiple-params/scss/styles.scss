@@ -1,0 +1,8 @@
+@import 'mixins/degradados';
+
+body {
+    min-height: 100vh;
+    background-color: azure;
+    margin: 0;
+    @include gradients-colors(black,white, tomato, gold);
+}
