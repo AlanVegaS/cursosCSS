@@ -1,0 +1,56 @@
+.main-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    @include from(large) {
+        display: flex;
+        font-size: 1rem;
+        height: $header-height;
+    }
+}
+
+.main-menu-item {
+    margin-left: 1em;
+    color: blueviolet;
+    margin: 1em;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.main-nav {
+    background-color: aquamarine;
+    height: calc(100vh - #{$header-height});
+    width: 80vw;
+    position: fixed;
+    right: calc((100vh - #{$header-height}) *-1);
+    bottom: 0;
+    transition: right .3s;
+    
+    &.show {
+        right: 0;
+    }
+
+    @include from(large) {
+        top: 0;
+        background-color: transparent;
+        right: 0;
+        width: auto;
+        height: $header-height;
+        position: static;
+    }
+}
+
+.main-menu-toggle {
+    $color: darkolivegreen;
+    width: 1.6rem;
+    height: 1.3rem;
+    background: linear-gradient($color 20%, transparent 20%, 
+                                transparent 40%, $color 40%, 
+                                $color 60%, transparent 60%,
+                                transparent 80%, $color 80%,);
+    cursor: pointer;
+    @include from(large) {
+        display: none;
+    }
+}
