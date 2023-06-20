@@ -1,6 +1,10 @@
-@import 'config/variables';
 @import 'mixins/breakpoints';
+@import 'config/variables';
 @import 'layout/layout.scss';
 @import 'components/header';
 @import 'base/base';
 @import 'components/menu';
+@import 'components/banner';
+@import 'components/card';
+@import 'components/buttons';
+@import 'components/footer';

@@ -1,0 +1,9 @@
+.main-footer{
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    padding: 2rem;
+    & p {
+        margin: 0;
+    }
+}

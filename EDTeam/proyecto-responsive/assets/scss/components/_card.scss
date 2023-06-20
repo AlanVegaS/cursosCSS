@@ -1,0 +1,43 @@
+.card {
+    box-shadow: 0 0 10px rgb(231, 231, 231);
+    margin: 1rem;
+    @include from(large) {
+        margin: 0;
+    }
+    &__image img {
+        display: block;
+        width: 100%;
+
+    }
+    &__content {
+        padding: 1rem;
+        
+    }
+    &__tittle {
+        font-size: var(--font-size-h2);
+        font-weight: 600;
+    }
+    &__schedule {
+        color: gray;
+        margin-top: .3rem;
+    }
+    &__description {
+        margin-top: .5rem;
+    }
+    &__footer {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        border-top: 1px solid rgb(231, 231, 231);
+        padding-top: 1rem;
+    }
+}
+
+.cards-grid {
+    @include from(large) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

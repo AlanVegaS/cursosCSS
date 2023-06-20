@@ -5,4 +5,34 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
+    position: relative;
+}
+.l-section {
+    &--diagonal {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(250, 250, 250);
+            z-index: var(--z-back);
+            transform: skewY(-2deg) scaleY(1.2);
+        }
+    }
+}
+
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-text {
+text-align: center;
+}
+
+@for $i from 1 through 20 {
+    .s-#{$i*5} {
+        width: #{$i*5%};
+    }
 }

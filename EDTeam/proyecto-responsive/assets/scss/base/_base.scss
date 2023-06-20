@@ -5,6 +5,9 @@
 body {
     margin: 0;
     font-family: lato, sans-serif;
+    font-size: var(--body-font-size);
+    min-height: 100vh;
+    position: relative;
 }
 
 a {
@@ -13,4 +16,15 @@ a {
 
 img {
     max-width: 100%;
+}
+
+h1 {
+    font-size: var(--size-h1);
+}
+h2 {
+    font-size: var(--small-font-size);
+}
+main {
+    position: relative;
+    margin-bottom: 2rem;
 }

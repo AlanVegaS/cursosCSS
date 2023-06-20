@@ -1,3 +1,26 @@
+:root {
+  --size-h1: 2rem;
+  --body--font-size: .9rem;
+  --small-font-size: .8rem;
+  --font-size-h2: 1.5rem;
+}
+@media screen and (min-width: 960px) {
+  :root {
+    --size-h1: 2.5rem;
+    --font-size-h2: 1.75rem;
+    --body-font-size: 1rem;
+    --small-font-size: .9rem;
+  }
+}
+
+:root {
+  --z-back: -1;
+  --z-normal: 1;
+  --z-toltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
 .l-container {
   max-width: 1200px;
   padding-left: 1rem;
@@ -5,6 +28,110 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.l-section--diagonal {
+  position: relative;
+}
+.l-section--diagonal::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(250, 250, 250);
+  z-index: var(--z-back);
+  transform: skewY(-2deg) scaleY(1.2);
+}
+
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.s-5 {
+  width: 5%;
+}
+
+.s-10 {
+  width: 10%;
+}
+
+.s-15 {
+  width: 15%;
+}
+
+.s-20 {
+  width: 20%;
+}
+
+.s-25 {
+  width: 25%;
+}
+
+.s-30 {
+  width: 30%;
+}
+
+.s-35 {
+  width: 35%;
+}
+
+.s-40 {
+  width: 40%;
+}
+
+.s-45 {
+  width: 45%;
+}
+
+.s-50 {
+  width: 50%;
+}
+
+.s-55 {
+  width: 55%;
+}
+
+.s-60 {
+  width: 60%;
+}
+
+.s-65 {
+  width: 65%;
+}
+
+.s-70 {
+  width: 70%;
+}
+
+.s-75 {
+  width: 75%;
+}
+
+.s-80 {
+  width: 80%;
+}
+
+.s-85 {
+  width: 85%;
+}
+
+.s-90 {
+  width: 90%;
+}
+
+.s-95 {
+  width: 95%;
+}
+
+.s-100 {
+  width: 100%;
 }
 
 .main-header {
@@ -30,6 +157,9 @@
 body {
   margin: 0;
   font-family: lato, sans-serif;
+  font-size: var(--body-font-size);
+  min-height: 100vh;
+  position: relative;
 }
 
 a {
@@ -38,6 +168,19 @@ a {
 
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-size: var(--size-h1);
+}
+
+h2 {
+  font-size: var(--small-font-size);
+}
+
+main {
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .main-menu {
@@ -63,16 +206,19 @@ img {
 }
 
 .main-nav {
-  background-color: aquamarine;
+  background-color: darkseagreen;
   height: calc(100vh - 4em);
   width: 80vw;
   position: fixed;
   right: calc((100vh - 4em) * -1);
   bottom: 0;
+  opacity: 0;
   transition: right 0.3s;
+  z-index: var(--z-fixed);
 }
 .main-nav.show {
   right: 0;
+  opacity: 1;
 }
 @media screen and (min-width: 960px) {
   .main-nav {
@@ -82,6 +228,7 @@ img {
     width: auto;
     height: 4em;
     position: static;
+    opacity: 1;
   }
 }
 
@@ -95,4 +242,116 @@ img {
   .main-menu-toggle {
     display: none;
   }
+}
+
+.main-banner {
+  padding: 1rem;
+  background-color: lightskyblue;
+  color: white;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .main-banner {
+    padding: 5rem 1rem 6rem;
+  }
+}
+.main-banner h1 {
+  margin: 0;
+}
+@media screen and (min-width: 960px) {
+  .main-banner h1 {
+    margin: 0.6em;
+  }
+}
+.main-banner h1, .main-banner h2 {
+  position: relative;
+}
+.main-banner__logo {
+  height: 7rem;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .main-banner__logo {
+    margin: 0 auto 0.5rem;
+  }
+}
+.main-banner__hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.4;
+}
+
+.card {
+  box-shadow: 0 0 10px rgb(231, 231, 231);
+  margin: 1rem;
+}
+@media screen and (min-width: 960px) {
+  .card {
+    margin: 0;
+  }
+}
+.card__image img {
+  display: block;
+  width: 100%;
+}
+.card__content {
+  padding: 1rem;
+}
+.card__tittle {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+}
+.card__schedule {
+  color: gray;
+  margin-top: 0.3rem;
+}
+.card__description {
+  margin-top: 0.5rem;
+}
+.card__footer {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-top: 1px solid rgb(231, 231, 231);
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 960px) {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.button-regular {
+  padding: 0.5rem;
+  background-color: white;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  color: tomato;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.button-regular:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.main-footer {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  padding: 2rem;
+}
+.main-footer p {
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */

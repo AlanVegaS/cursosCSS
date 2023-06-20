@@ -5,3 +5,26 @@ $header-height: 4em;
 $breakpoints: (
     large: 960px
 );
+
+//sizes 
+:root {
+    --size-h1: 2rem;
+    --body--font-size: .9rem;
+    --small-font-size: .8rem;
+    --font-size-h2: 1.5rem;
+    @include from(large) {
+        --size-h1: 2.5rem;
+        --font-size-h2: 1.75rem;
+        --body-font-size: 1rem;
+        --small-font-size: .9rem;
+    }
+}
+
+//apilamient vars
+:root {
+    --z-back: -1;
+    --z-normal: 1;
+    --z-toltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}

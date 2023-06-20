@@ -19,16 +19,18 @@
 }
 
 .main-nav {
-    background-color: aquamarine;
+    background-color: darkseagreen;
     height: calc(100vh - #{$header-height});
     width: 80vw;
     position: fixed;
     right: calc((100vh - #{$header-height}) *-1);
     bottom: 0;
+    opacity: 0;
     transition: right .3s;
-    
+    z-index: var(--z-fixed);
     &.show {
         right: 0;
+        opacity: 1;
     }
 
     @include from(large) {
@@ -38,6 +40,7 @@
         width: auto;
         height: $header-height;
         position: static;
+        opacity: 1;
     }
 }
 

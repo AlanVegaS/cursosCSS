@@ -1,0 +1,38 @@
+.main-banner {
+    padding: 1rem;
+    background-color: lightskyblue;
+    color: white;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0,  100% 100%, 0 94%);
+    position: relative;
+
+    @include from(large) {
+        padding: 5rem 1rem 6rem;
+    }
+    & h1 {
+        margin: 0;
+        @include from(large) {
+            margin: .6em;
+        }
+    }
+    & h1, h2 {
+        position: relative;
+    }
+    &__logo {
+        height: 7rem;
+        display: block;
+        margin: 0 auto;
+        @include from(large) {
+            margin: 0 auto .5rem;
+        }
+        position: relative;
+    }
+    &__hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        opacity: .4;
+    }
+}
